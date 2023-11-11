@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                tomato: "hsl(4, 100%, 67%)",
+                                "tomato-a": "hsla(4, 100%, 67%, 0.2)",
+                            },
+                            neutral: {
+                                "dark-slate-grey": "hsl(234, 29%, 20%)",
+                                "charcoal-grey": "hsl(235, 18%, 26%)",
+                                grey: "hsl(231, 7%, 60%)",
+                                white: "hsl(0, 0%, 100%)",
+                            },
+                        },
+                        fontFamily: {
+                            body: ["Roboto"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <title>Document</title>
+    </head>
+    <body class="w-screen h-screen flex justify-center items-center bg-neutral-charcoal-grey font-body">
+        <div id="container2" class="w-full h-full md:w-fit md:h-fit md:inline-block bg-neutral-white md:rounded-[36px] px-[24px] pb-10 pt-20 md:p-[48px] md:shadow-2xl">
+            <div class="w-full h-full justify-between md:w-[360px] flex flex-col md:gap-y-[32px] text-neutral-dark-slate-grey">
+                <div class="flex flex-col gap-y-[32px]">
+                    <img src="../assets/images/icon-success.png" class="w-[56px] h-[56px] md:w-[64px] md:h-[64px]" />
+                    <h1 class="font-bold text-[40px] md:text-[56px] leading-[40px] md:leading-[64px]">Thanks for subscribing!</h1>
+                    <p class="font-normal text-[16px] leading-6">A confirmation email has been sent to <span class="font-bold">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+                </div>
+                <a href="index.html">
+                    <button
+                        id="dismiss-message"
+                        class="bg-neutral-dark-slate-grey text-neutral-white w-full h-[55px] rounded-lg font-semibold hover:bg-gradient-to-r from-[#ff537b] to-primary-tomato hover:shadow-[0_10px_20px_10px_hsla(4,100%,67%,0.1)]"
+                    >
+                        Dismiss message
+                    </button>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
